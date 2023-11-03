@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traductor de Nombres a Inglés</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Traductor de nombres. <br>
+         Español-Inglés</h1>
+ 
+         
+      
+    <form method="POST">
+        <label  class="español" for="nombre_espanol">Tu nombre en español:</label>
+        <input class="casilla" type="text" name="nombre_espanol" id="nombre_espanol" required>
+        <input type="submit" value="Traducir">
+    </form>
+    {% if nombre_ingles %}
+    <p >Tu nombre en inglés es: {{ nombre_ingles }}</p>
+    {% endif %}
+</body>
+</html>
